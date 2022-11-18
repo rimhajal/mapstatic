@@ -8,7 +8,9 @@ This module deals with country scale electricity consumption. Different animatio
 
 To install this package, one has to run the following line in its command prompt.
 
- pip install git+https://github.com/SUITE
+''' console
+$ pip install git+https://github.com/rimhajal/mapstatic
+'''
 
 ## Documentation
 
