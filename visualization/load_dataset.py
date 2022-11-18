@@ -16,6 +16,6 @@ class load_dataset:
     def save_as_df():
         df_static = pd.read_csv(
             path_target,
-            sep=",",
+            sep=";",
         )
         return df_static
