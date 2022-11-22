@@ -2,7 +2,7 @@
 
 ## Overview
 
-This module deals with country scale electricity consumption. Different animations are available in order to have a better visualization.
+This module deals with nationwide electricity consumption. Different animations are available in order to have a better visualization.
 
 ## Installation
 
