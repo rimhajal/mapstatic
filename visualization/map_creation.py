@@ -13,10 +13,22 @@ def map_creation(df_static):
     geo_json_data = json.loads(requests.get(url).text)
     commune_avg = df_static.groupby('Nom de la commune', as_index=False)['Consommation annuelle moyenne de la commune (MWh)'].mean()
     mymap = folium.Map(location=[46.2276,2.2137], zoom_start=5.5)
-    folium.GeoJson(geo_json_data,zoom_on_click=True).add_to(mymap)
-    colormap = linear.YlGn_09.scale(
-        commune_avg['Consommation annuelle moyenne de la commune (MWh)'].min(), commune_avg['Consommation annuelle moyenne de la commune (MWh)'].max()
-    )
+    mymap.choropleth(
+        geo_data=geo_json_data,
+        name='Choropleth',
+        data=commune_avg,
+        columns=['Nom de la commune','Consommation annuelle moyenne de la commune (MWh)'],
+        key_on="feature.properties.libgeo",
+        fill_color='YlGnBu', nan_fill_color="#FF000000",
+        fill_opacity=1,
+        line_opacity=0.2,
+        legend_name='Consommation moyenne des 4 dernières années (MWh)',
+        smooth_factor=0
+        )
+        folium.LayerControl().add_to(mymap)
+
+
+    
 
 
 
