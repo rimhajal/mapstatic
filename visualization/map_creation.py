@@ -15,7 +15,7 @@ def map_creation(df_static):
     mymap = folium.Map(location=[46.2276,2.2137], zoom_start=5.5)
     mymap.choropleth(
         geo_data=geo_json_data,
-        name='Choropleth',
+        name='Communes',
         data=commune_avg,
         columns=['Nom de la commune','Consommation annuelle moyenne de la commune (MWh)'],
         key_on="feature.properties.libgeo",
@@ -25,7 +25,9 @@ def map_creation(df_static):
         legend_name='Consommation moyenne des 4 dernières années (MWh)',
         smooth_factor=0
         )
-        folium.LayerControl().add_to(mymap)
+    folium.LayerControl().add_to(mymap)
+    return(mymap)
+    
 
 
     
