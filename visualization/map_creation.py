@@ -12,6 +12,14 @@ def map_creation(df_static):
     #json file with the coordinates of each commune in France
     geo_json_data = json.loads(requests.get(url).text)
     commune_avg = df_static.groupby('Nom de la commune', as_index=False)['Consommation annuelle moyenne de la commune (MWh)'].mean()
+
+
+    for x in geo_json_data["features"]: #filtering out the communes that don't exist in our database
+        if x['properties']['libgeo'].upper()!=commune_avg['Nom de la commune'].str.upper().all(): #capitalized everything because it is case sensitive 
+            geo_json_data["features"].remove(x)
+    geo_json_data['features'].sort(key=lambda e: e['properties']['libgeo'])
+    geo_json_data['features']
+
     mymap = folium.Map(location=[46.2276,2.2137], zoom_start=5.5)
     mymap.choropleth(
         geo_data=geo_json_data,
