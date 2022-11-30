@@ -1,9 +1,7 @@
 import os
 import pandas as pd
 import pooch
-
-url_db = "https://data.enedis.fr/explore/dataset/consommation-annuelle-residentielle-par-adresse/download/?format=csv&timezone=Europe/Berlin&lang=fr&use_labels_for_header=true&csv_separator=%3B"
-path_target = "./power_consumption.csv"
+from visualization import url_db,path_target
 
 class load_dataset:
     def __init__(self, url=url_db, target_name=path_target):

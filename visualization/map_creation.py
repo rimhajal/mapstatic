@@ -4,7 +4,7 @@ import geopandas as gpd
 import folium
 import pyogrio
 
-def map_creation(df_static):
+def map_creation(df_static,geo_json_data):
     #json file with the coordinates of each commune in France imported as dataframe
     #capitalized everything because it is case sensitive 
     geo_json_data['libgeo'] = geo_json_data['libgeo'].str.upper()
