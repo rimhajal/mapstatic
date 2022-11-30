@@ -1,4 +1,9 @@
-numpy==
-matplotlib==
-scipy==
-pandas==
+numpy
+matplotlib
+scipy
+pandas
+os
+pyogrio
+geopandas
+folium
+pooch
