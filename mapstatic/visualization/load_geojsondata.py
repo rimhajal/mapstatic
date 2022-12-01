@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import pooch
 import geopandas as gpd
-from visualization import url2,path_target2
+from links import url2,path_target2
 
 class load_geojsondata:
     def __init__(self, url=url2, target_name=path_target2):

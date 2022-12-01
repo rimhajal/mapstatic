@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import pooch
-from visualization import url_db,path_target
+from links import url_db,path_target
 
 class load_dataset:
     def __init__(self, url=url_db, target_name=path_target):
