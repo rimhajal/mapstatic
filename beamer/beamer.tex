@@ -1,0 +1,70 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Hannover}
+\usecolortheme{rose}
+
+
+\title[Développement Logiciel]{MAPSTATIC}
+\author[]{Rim Alhajal, Thiziri Abchiche, Maryem El Yamani, Lilou Zulewski}
+\institute[M1 - SSD]{M1 - SSD}
+\date{November 2022}
+
+\AtBeginSection[]
+{
+\begin{frame}{Plan}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Données et Objectif}
+
+\section{Visualisation}
+
+\section{Prédiction}
+
+\begin{frame}
+\frametitle{Données et Objectif}
+\begin{itemize}
+    \item Créer une carte interactive de la France pour mieux visualiser les données de consommation électrique annuelle moyenne par ville.\\
+    \item Prédire la consommation de différentes sources d'énergie pour le 8 Décembre 2022 par quart d'heure.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Visualisation}
+Deux différents codes ont étaient faits. Une par commune et une autre par département.\\
+\end{frame}
+
+\begin{frame}
+\frametitle{Visualisation par Commune}
+\begin{itemize}
+    \item La moyenne des dernières années a été calculée pour chaque commune.\\
+    \item Un fichier json portant les coordonnées de toutes les communes en France a été utilisé.
+    \item Pour la partie interactive, au-dessus de chaque commune, une bulle apparaît montrant le nom de la commune avec la valeur exacte.
+\end{itemize}
+\end{frame}
+
+\begin{frame}  
+\frametitle{Visualisation par Commune}
+\begin{center}
+\includegraphics[width=100mm]{Screenshot (3).png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Visualisation par Département} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Prédiction}
+\begin{itemize}
+    \item En utilisant la moyenne et l'écart-type.
+    \item En utilisant la méthode de lissage.
+\end{itemize}
+\end{frame}
+
+\end{document}
