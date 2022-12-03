@@ -1,5 +1,5 @@
-from mapstatic import visualization 
+from mapstatic.visualization import * 
 
-data = visualization.load_dataset().save_as_df()
-geo_json_data=visualization.load_geojsondata().save_as_df2()
-mymap=visualization.map_creation(data,geo_json_data)
+data = load_dataset.save_as_df()
+geo_json_data=load_geojsondata().save_as_df2()
+mymap=map_creation(data,geo_json_data)
