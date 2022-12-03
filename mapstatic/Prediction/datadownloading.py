@@ -26,9 +26,3 @@ class datadownloading():
         dataframe.set_index('date', inplace=True)
         dataframe = dataframe.loc[['2013-12-08', '2014-12-08', '2015-12-08', '2016-12-08', '2017-12-08', '2018-12-08', '2019-12-08', '2020-12-08', '2021-12-08']]
         return(dataframe)
-
-classe = datadownloading()
-dataframe = datadownloading.saving()
-print(dataframe)
-dataframe.get('date')
-
