@@ -1,4 +1,3 @@
-#%%
 #importing modules
 import pandas as pd
 import numpy as np
@@ -8,7 +7,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import csv
 
-
+#defining variables
 url = 'https://odre.opendatasoft.com/explore/dataset/eco2mix-regional-cons-def/download/?format=csv&timezone=Europe/Berlin&lang=fr&use_labels_for_header=true&csv_separator=%3B'
 path_target = './data/consumptiondata.csv'
 
