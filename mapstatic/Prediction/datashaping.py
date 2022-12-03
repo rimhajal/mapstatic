@@ -6,7 +6,7 @@ import datadownloading
 dataframe = datadownloading.datadownloading.saving()
 print(dataframe)
 
-#creating all the energies's dataframes  
+#creating all the energies' dataframes  
 
 '''global consumption'''
 def consumptiondata():
@@ -69,7 +69,7 @@ def hydraulicdata():
     return(hydraulicdata)
     
  
-#visualizing all the newly created energies's dataframes
+#visualizing all the newly created energies' dataframes
 consumptiondata().plot(figsize=(20, 5), title="French Global Energy Consumption on the 8th December", xlabel='Hour', ylabel='MW')
 thermaldata().plot(figsize=(20, 5), title="French Thermal Energy Consumption on the 8th December", xlabel='Hour', ylabel='MW')
 nucleardata().plot(figsize=(20, 5), title="French Nuclear Energy Consumption on the 8th December", xlabel='Hour', ylabel='MW')
