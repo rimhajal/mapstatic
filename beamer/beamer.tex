@@ -1,70 +1,141 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
-\usetheme{Hannover}
+\usetheme{Madrid}
 \usecolortheme{rose}
+\setbeamertemplate{navigation symbols}{}
+
 
 
 \title[Développement Logiciel]{MAPSTATIC}
 \author[]{Rim Alhajal, Thiziri Abchiche, Maryem El Yamani, Lilou Zulewski}
-\institute[M1 - SSD]{M1 - SSD}
-\date{November 2022}
+\institute{M1 - SSD}
+\date{2 décembre 2022}
 
-\AtBeginSection[]
-{
-\begin{frame}{Plan}
-\tableofcontents[currentsection]
-\end{frame}
-}
+
 
 \begin{document}
-
 \maketitle
+
+
 
 \section{Données et Objectif}
 
-\section{Visualisation}
-
-\section{Prédiction}
-
 \begin{frame}
 \frametitle{Données et Objectif}
-\begin{itemize}
-    \item Créer une carte interactive de la France pour mieux visualiser les données de consommation électrique annuelle moyenne par ville.\\
-    \item Prédire la consommation de différentes sources d'énergie pour le 8 Décembre 2022 par quart d'heure.
-\end{itemize}
+\begin{block}{Visualisation}
+Créer une carte interactive de la France pour mieux visualiser les données de consommation électrique annuelle moyenne par ville
+\end{block}
+\begin{block}{Prédiction}
+Prédire la consommation de différentes sources d'énergie pour le 8 Décembre 2022 par quart d'heure
+\end{block}
 \end{frame}
 
+
+
+\section{Visualisation}
+
 \begin{frame}
-\frametitle{Visualisation}
-Deux différents codes ont étaient faits. Une par commune et une autre par département.\\
+\frametitle{Visualisation - Objectifs}
+\begin{block}{Différentes visualisations}
+\begin{itemize}
+    \item par communes \\
+    \item par départements \\
+\end{itemize}
+\end{block}
+\begin{block}{Traitement des données de consommation}
+\begin{itemize}
+    \item déduire les villes plus ou moins consommatrices de la région
+\end{itemize}
+\end{block}
 \end{frame}
 
 \begin{frame}
 \frametitle{Visualisation par Commune}
+\begin{block}{Utilisation des données et Création de la carte}
 \begin{itemize}
-    \item La moyenne des dernières années a été calculée pour chaque commune.\\
-    \item Un fichier json portant les coordonnées de toutes les communes en France a été utilisé.
-    \item Pour la partie interactive, au-dessus de chaque commune, une bulle apparaît montrant le nom de la commune avec la valeur exacte.
+    \item calcul de la moyenne des consommations des dernières années par commune \\
+    \item utilisation d'un fichier json portant les coordonnées de toutes les communes en France
 \end{itemize}
-\end{frame}
-
-\begin{frame}  
-\frametitle{Visualisation par Commune}
-\begin{center}
-\includegraphics[width=100mm]{Screenshot (3).png}
-\end{center}
+\end{block}
+\begin{block}{Partie interactive}
+\begin{itemize}
+    \item mise en place d'une bulle contenant le nom de la commune avec la valeur exacte au-dessus de chaque commune
+\end{itemize}
+\end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Visualisation par Département} 
+\frametitle{Visualisation par Département}
+\begin{block}{Utilisation des données}
+\begin{itemize}
+    \item modification des données pour en extraire les données par département
+\end{itemize}
+\end{block}
+\begin{block}{Création de la Carte}
+\begin{itemize}
+    \item utilisation du geojson et choropleth
+\end{itemize}
+\end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Prédiction}
+\frametitle{Traitement des Données de Consommation}
+\begin{block}{Connaître les communes impactantes sur la consommation}
 \begin{itemize}
-    \item En utilisant la moyenne et l'écart-type.
-    \item En utilisant la méthode de lissage.
+    \item  histogramme des moyennes des consommations annuelles de chaque commune de la région
+    \item  histogramme des consommations des villes les plus et les moins consommatrices
 \end{itemize}
+\end{block}
 \end{frame}
+
+
+
+\section{Prédiction}
+\begin{frame}{Prédiction - Récupération des Données}
+\begin{block}{Importation des Données}
+\begin{itemize}
+    \item création d'une classe
+\end{itemize}
+\end{block}
+\begin{block}{Mise en Forme des Données}
+\begin{itemize}
+    \item création de nouveaux jeux de données pour chaque énergie
+    \item suppression des données manquantes
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Prédiction - Méthodes}
+\begin{block}{Différentes Méthodes de Prédiction}
+  \begin{itemize}
+    \item la moyenne et l'écart-type
+    \item un modèle ARIMA
+    \item un modèle PROPHET
+\end{itemize} 
+\end{block}
+\end{frame}
+
+
+
+\section{Git}
+\begin{frame}{Mise en Forme du Git}
+\begin{block}{Fichiers Supplémentaires}
+    \begin{itemize}
+    \item init
+    \item setup
+    \item workflow
+    \item requirements
+\end{itemize}
+\end{block}
+\begin{block}{Documentation}
+\begin{itemize}
+    \item tutoriel d'importation du module mapstatic
+    \item site web
+\end{itemize}
+\end{block}
+\end{frame}
+
+
 
 \end{document}
