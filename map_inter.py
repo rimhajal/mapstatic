@@ -80,7 +80,7 @@ folium.features.GeoJson(
     highlight_function=highlight_function, 
     tooltip=folium.features.GeoJsonTooltip(
         fields=['Nom de la commune','Consommation annuelle moyenne de la commune (MWh)'],
-        aliases=['Neighborhood: ','Resident foreign population in %: '],
+        aliases=['Commune: ','Consommation moyenne (MWh): '],
         style=("background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;"),
         localize=True,
         sticky=True,
