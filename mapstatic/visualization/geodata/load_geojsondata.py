@@ -12,6 +12,6 @@ class load_geojsondata:
     @staticmethod
     def save_as_df2():
         geo_json_data = gpd.read_file(
-            path_target2
+            path_target2,
         )
         return geo_json_data

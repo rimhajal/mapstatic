@@ -1,8 +1,4 @@
-import pandas as pd
-import os
-import geopandas as gpd
 import folium
-import pyogrio
 
 def map_creation(df_static,geo_json_data):
     #json file with the coordinates of each commune in France imported as dataframe
@@ -15,7 +11,7 @@ def map_creation(df_static,geo_json_data):
     #creating the dataframe that only contains the communes in both dataframes with their coordinates and consumption rates
     geo_json_data=geo_json_data.loc[:,('libgeo','geometry')]
     df_final = geo_json_data.merge(commune_avg, left_on='libgeo', right_on='Nom de la commune',how='outer')
-    df_final.dropna()
+    df_final = df_final.dropna()
 
     #adding our data to the map
     mymap = folium.Map(location=[46.2276,2.2137], zoom_start=5.5)
