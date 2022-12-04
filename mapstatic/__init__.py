@@ -1,7 +1,5 @@
-from mapstatic import *
-
 __version__ = "0.0.1"
 
-from dataloading import * 
-from geojsonloading import *
-from mapcreation import *
+from .visualization.dataloading import load_dataset
+from .visualization.geojsonloading import load_geojsondata
+from .visualization.mapcreation import map_creation
