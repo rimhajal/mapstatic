@@ -7,3 +7,6 @@ pyogrio
 geopandas
 folium
 pooch
+plotly.express 
+json 
+requests 
