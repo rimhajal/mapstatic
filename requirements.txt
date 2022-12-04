@@ -6,3 +6,6 @@ os
 geopandas
 folium
 pooch
+plotly.express
+json
+requests
