@@ -10,9 +10,9 @@ def df_departement (df_new,df_deprt):
         data_year=df_deprt_ann(df_new, df_deprt, années)
         ls[str(années)]=data_year["Consommation annuelle moyenne de la commune (MWh)"].values 
     cons_par_deprt=pd.DataFrame(ls) #créate dataframe 
-    cons_par_deprt.rename(columns={'Consommation annuelle moyenne de la commune (MWh)':'Consommation annuelle moyenne du departement (MWh)'}, inplace=True)
+    cons_par_deprt.rename(columns={'Consommation annuelle moyenne de la commune (MWh)':'Consommation annuelle moyenne par departement (MWh)'}, inplace=True)
     cons_par_deprt["nom_departement"]=data_year.index.values
-    cons_par_deprt['Consommation annuelle moyenne du departement (MWh)']=cons_par_deprt.mean(axis=1)
-    cons_par_deprt=cons_par_deprt[['nom_departement','2018','2019','2020','2021','Consommation annuelle moyenne du departement (MWh)']]
+    cons_par_deprt['Consommation annuelle moyenne par departement (MWh)']=cons_par_deprt.mean(axis=1)
+    cons_par_deprt=cons_par_deprt[['nom_departement','2018','2019','2020','2021','Consommation annuelle moyenne par departement (MWh)']]
 
     return cons_par_deprt
