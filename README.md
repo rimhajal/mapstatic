@@ -1,5 +1,5 @@
 <p align="center">
-<h1>MAPSTATIC</h1>
+<strong>MAPSTATIC</strong> <br>
 <img src="./documentation/_static/logo.svg" style="vertical-align:middle" width="500" height='200' class='center' alt='logo'>
 </p>
 
