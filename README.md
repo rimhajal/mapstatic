@@ -1,5 +1,9 @@
 <center> <h1>MAPSTATIC</h1> </center>
 
+<p align="center">
+<img src="./doc/_static/logo1_f.svg" style="vertical-align:middle" width="500" height='200' class='center' alt='logo'>
+</p>
+
 ## Overview
 
 This module deals with nationwide energy consumption. Several illustrations are available in order to have a better understanding and visualization of these phenomenons over time.
