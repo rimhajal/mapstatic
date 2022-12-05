@@ -6,8 +6,8 @@
 Welcome to Mapstatic's documentation!
 ===========================================
 
-This package was built as a project in the software development course.
-The main goal here is to observe the french energy consumption and to predict its value on the 8th of December 2022 : detailled illustrations and their explanations are available in the gallery.
+This package was built as a project in the software devlopment course.
+The main goal here is to observe the french electricity consumption and to predict its value on the 8th of December 2022 : detailled illustrations and their explanations are available in the gallery.
 
 .. toctree::
    :maxdepth: 2
@@ -31,19 +31,11 @@ Guide
    mapstatic/map
    mapstatic/static
 
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Project Requirements
-
-   installation/requirements
-
 .. toctree::
    :maxdepth: 2
    :caption: Gallery
 
-   gallery/map
-   gallery/static
+   gallery/gallery
 
 
 
