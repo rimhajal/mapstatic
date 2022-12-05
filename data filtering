@@ -20,19 +20,19 @@ print(df_deprt)
 def df_deprt_ann(df_new,df_deprt,années):
  df_ann=df_new.loc[df_new["Année"]== années] #dataframe for years 
  #drop missing values 
- df_ann.dropna(subset=['code INSEE de la commune','Nom de la commune','Consommation annuelle moyenne de la commune(MWh)'])
+ df_ann.dropna(subset=['Code INSEE de la commune','Nom de la commune','Consommation annuelle moyenne de la commune(MWh)'])
  #rename column as name as df_deprt
  df_ann=df_ann.rename(columns={"code INSEE de la commune":"code_commune_INSEE"})
  df_ann['code_commune_INSEE']=df_ann['code_commune_INSEE'].astype(str)
- Code_INSEE =set(df_ann['code_commune_INSEE'])
- df_deprt=df_deprt.loc[df_deprt['code_commune_INSEE'].isin(Code_INSEE)]
+ INSEE_codes =set(df_ann['code_commune_INSEE'])
+ df_deprt=df_deprt.loc[df_deprt['code_commune_INSEE'].isin(INSEE_codes)]
  df_deprt['code_commune_INSEE']=df_deprt['code_commune_INSEE'].astype(int)
  df_ann['code_commune_INSEE']=df_ann['code_commune_INSEE'].astype(int)
  #concatenate df_ann & df_deprt
- df_new_ann_deprt =pd.merge(df_deprt,df_ann,how='inner',on='code_commune_INSEE ')
- df_ann.drop_duplicates(subset=['Consommation annuelle moyenne de la commune (MWh)','Nom de la commune'])
- df_ann.dropna(subset=['Nom de la commune'])
- df_ann=df_ann[['nom_department ','Consommation annuelle moyenne de la commune (MWh)', 'Nom de la commune']]
- df_ann= df_ann.groupby(['nom_departement']).sum()
+ df_ann_deprt =pd.merge(df_deprt,df_ann,how='inner',on='code_commune_INSEE ')
+ df_ann_deprt.drop_duplicates(subset=['Consommation annuelle moyenne de la commune (MWh)','Nom de la commune'])
+ df_ann_deprt.dropna(subset=['Nom de la commune'])
+ df_ann_deprt=df_ann_deprt[['nom_department ','Consommation annuelle moyenne de la commune (MWh)', 'Nom de la commune']]
+ df_ann_deprt= df_ann_deprt.groupby(['nom_departement']).sum()
 
- return(df_ann)
+ return(df_ann_deprt)
