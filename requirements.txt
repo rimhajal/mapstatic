@@ -9,3 +9,7 @@ pooch
 plotly.express
 json
 requests
+Prophet
+statsmodels
+warnings
+plotly.express
