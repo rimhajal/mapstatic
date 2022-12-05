@@ -36,6 +36,8 @@ plt.show()
 x=[3.15 ,4.05,4.43,6.11,6.14,6.50,]
 fig=plt.figure(figsize=(5.5,5.5))
 plt.pie(x,labels=("Rodez","Nimes","fortignan","saint-george-d'orque","prade-le-lez","castries"),
-colors =("#a86544","#eb5b13","#ebc713","#bdeb13",'#F5F5DC','#F0FFFF','#DEB887'))
+colors =("#a86544","#eb5b13","#ebc713","#bdeb13",'#F5F5DC','#F0FFFF','#DEB887'),
+shadow=True, startangle=140,autopct='%1.1f%%'
+)
 plt.title("les villes les plus/moins consommatrice de l'occitanie")
 plt.show()
