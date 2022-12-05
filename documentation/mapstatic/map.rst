@@ -1,2 +1,3 @@
-Map
-====
+Interactive Map
+================
+
