@@ -21,8 +21,8 @@ A documentation of this package is available [here](https://mapstatic.readthedoc
 
 ## Structure
 
-A beamer presentation is stored in the `./beamer` folder alongside the necessary style file to run the file. The documentation was made using the sphinx package in the `./documentation` directory.
+A beamer presentation is stored in the `./beamer` folder alongside the necessary style file to run the file. The documentation was made using sphinx, it can be found in the `./documentation` directory.
 
 *Tests functions* are implemented in the `./mapstatic/tests` folder in order to assure the good development of this package. A continuous integration hook action is disposed in the `./github/workflows` folder which triggers an action at each push.
 
-Every bit of the main code is in the `./mapstatic` folder.
+The main code is in the `./mapstatic` folder.
