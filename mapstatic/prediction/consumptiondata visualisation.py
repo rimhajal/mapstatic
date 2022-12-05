@@ -3,7 +3,7 @@
 
 # In[116]:
 
-#___importing libraries_____________________________________________
+#___importing packages_____________________________________________
 
 import pandas as pd
 import numpy as np
@@ -142,8 +142,9 @@ plt.plot(df1['y'], label='Consumption')
 df1.plot(x='ds',y='y', figsize=(18,6))
 #___________________________Prediction avec prophet____________
 df1['ds']= pd.to_datetime(df1['ds'], format='%Y-%m-%d').dt.date
-
-
-
-
-
+model= Prophet()
+model.fit(df1)
+days=48*5 # heure * nombre de jour
+future = model.fit(df1).make_future_dataframe(periods=days, freq="15T", include_history=False,daily_seasonality=True)
+forcast = model.predict(future)
+fig1=model.plot(forecast)
