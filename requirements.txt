@@ -10,3 +10,4 @@ pooch
 plotly.express 
 json 
 requests 
+matplotlib.pyplot
