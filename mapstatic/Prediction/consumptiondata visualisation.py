@@ -3,6 +3,7 @@
 
 # In[116]:
 
+#___importing libraries_____________________________________________
 
 import pandas as pd
 import numpy as np
@@ -23,12 +24,11 @@ import matplotlib.pyplot as plt
 from prophet.plot import plot_components_plotly
 from prophet.plot import plot_plotly
 import pandas as dp
+from datetime import datetime
 
 
-# In[117]:
 
-
-#......DATA 2020
+#......DATA 2020............................................................
 url = "https://bit.ly/3V81yIg"
 path_target = "./eco2mix-national-cons-def(3).csv"
 path, fname = os.path.split(path_target)
@@ -37,10 +37,6 @@ data1= pd.read_csv("eco2mix-national-cons-def(3).csv",sep=";")
 data1=data1[['Date','Heure','Consommation (MW)']]
     
 
-
-# In[118]:
-
-
 ## Changing time format
 time_improved = pd.to_datetime(data1['Date'] + ' ' + data1['Heure'],format='%Y-%m-%d %H:%M')
 data1['Temps'] = time_improved  
@@ -48,9 +44,6 @@ data1.set_index('Temps', inplace=True)
 del data1['Heure']
 del data1['Date']
 data1 = data1.sort_index(ascending=True)
-
-
-# In[119]:
 
 
 ## Remplacer les Nan par la moyenne de la colonne
@@ -64,7 +57,7 @@ print("le nombre de NaN  est : ",int(data1.isna().sum()))
 # In[120]:
 
 
-#.......DATA 2021
+#.......DATA 2021...........
 url = "https://bit.ly/3UO3NRc"
 path_target = "./eco2mix-national-cons-def(4).csv"
 path, fname = os.path.split(path_target)
@@ -89,7 +82,7 @@ print("le nombre de NaN  est : ",int(data2.isna().sum()))
 # In[121]:
 
 
-#....DATA 2022 from january to mai
+#....DATA 2022 from january to mai...........
 url = "https://bit.ly/3gowmWv"
 path_target = "./eco2mix-national-cons-def(5).csv"
 path, fname = os.path.split(path_target)
@@ -134,39 +127,22 @@ data4 = data4.dropna()
 print("le nombre de NaN  est : ",int(data4.isna().sum()))
 
 
-# In[125]:
+# Fusionner les données de 2020 ,2021,2022
 
 
 df = pd.concat([data1, data2, data3,data4], axis=0)
 return df
 
-
-# In[126]:
-
-
-df
-
-
-# In[131]:
-
-
-#visualisation des données
-px.area(y='Consommation (MW)',data_frame= datafinal)
-
-
-# In[129]:
-
+#____________________visualisation des données_____
+px.area(y='Consommation (MW)',data_frame= df)
 
 df.resample('Y').mean().plot()
-
-
-# In[135]:
-
-
+df1 = df.reset_index()
+df1.rename(columns = {'Consommation (MW)': 'y', 'Temps':'ds'})
+plt.plot(df1['y'], label='Consumption')
 
 
 
-# In[ ]:
 
 
 
