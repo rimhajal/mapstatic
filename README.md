@@ -1,5 +1,4 @@
-<p align="center">
-   MAPSTATIC <br></p>
+<center> <h1>MAPSTATIC</h1> </center>
 
 ## Overview
 
