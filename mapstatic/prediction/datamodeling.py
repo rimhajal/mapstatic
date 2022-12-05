@@ -17,7 +17,7 @@ class prediction:
     def dataset():
         energy = input('Which energy consumption would you like to predict ?')
         if energy == 'global':
-            data = datashaping.consumptiondata()
+            data = datashaping.datashaping.consumptiondata()
             data = data.loc[['2013-12-01', '2013-12-02', '2013-12-03', '2013-12-04', '2013-12-05', '2013-12-06', '2013-12-07', '2013-12-08',
                                 '2014-12-01', '2014-12-02', '2014-12-03', '2014-12-04', '2014-12-05', '2014-12-06', '2014-12-07', '2014-12-08',
                                 '2015-12-01', '2015-12-02', '2015-12-03', '2015-12-04', '2015-12-05', '2015-12-06', '2015-12-07', '2015-12-08',
@@ -46,7 +46,7 @@ class prediction:
             print(globalconsumption)
             return(data, mean)
         elif energy == 'thermal':
-            data = datashaping.thermaldata()
+            data = datashaping.datashaping.thermaldata()
             data = data.loc[['2016-12-01', '2016-12-02', '2016-12-03', '2016-12-04', '2016-12-05', '2016-12-06', '2016-12-07', '2016-12-08',
                                 '2017-12-01', '2017-12-02', '2017-12-03', '2017-12-04', '2017-12-05', '2017-12-06', '2017-12-07', '2017-12-08',
                                 '2018-12-01', '2018-12-02', '2018-12-03', '2018-12-04', '2018-12-05', '2018-12-06', '2018-12-07', '2018-12-08',
@@ -71,7 +71,7 @@ class prediction:
             print(thermalconsumption)
             return(data, mean)
         elif energy == 'nuclear':
-            data = datashaping.nucleardata()
+            data = datashaping.datashaping.nucleardata()
             data = data.loc[['2016-12-01', '2016-12-02', '2016-12-03', '2016-12-04', '2016-12-05', '2016-12-06', '2016-12-07', '2016-12-08',
                                 '2017-12-01', '2017-12-02', '2017-12-03', '2017-12-04', '2017-12-05', '2017-12-06', '2017-12-07', '2017-12-08',
                                 '2018-12-01', '2018-12-02', '2018-12-03', '2018-12-04', '2018-12-05', '2018-12-06', '2018-12-07', '2018-12-08',
@@ -96,7 +96,7 @@ class prediction:
             print(nuclearconsumption)
             return(data, mean)
         elif energy == 'wind':
-            data = datashaping.winddata()
+            data = datashaping.datashaping.winddata()
             data = data.loc[['2020-12-01', '2020-12-02', '2020-12-03', '2020-12-04', '2020-12-05', '2020-12-06', '2020-12-07', '2020-12-08',
                                 '2021-12-01', '2021-12-02', '2021-12-03', '2021-12-04', '2021-12-05', '2021-12-06', '2021-12-07', '2021-12-08']]
             for nan in range(len(data)-1):
@@ -117,7 +117,7 @@ class prediction:
             print(windconsumption)
             return(data, mean)
         elif energy == 'solar':
-            data = datashaping.solardata()
+            data = datashaping.datashaping.solardata()
             data = data.loc[['2020-12-01', '2020-12-02', '2020-12-03', '2020-12-04', '2020-12-05', '2020-12-06', '2020-12-07', '2020-12-08',
                                 '2021-12-01', '2021-12-02', '2021-12-03', '2021-12-04', '2021-12-05', '2021-12-06', '2021-12-07', '2021-12-08']]
             for nan in range(len(data)-1):
@@ -138,7 +138,7 @@ class prediction:
             print(solarconsumption)
             return(data, mean)
         elif energy == 'hydraulic':
-            data = datashaping.hydraulicdata()
+            data = datashaping.datashaping.hydraulicdata()
             data = data.loc[['2013-12-01', '2013-12-02', '2013-12-03', '2013-12-04', '2013-12-05', '2013-12-06', '2013-12-07', '2013-12-08',
                                 '2014-12-01', '2014-12-02', '2014-12-03', '2014-12-04', '2014-12-05', '2014-12-06', '2014-12-07', '2014-12-08',
                                 '2015-12-01', '2015-12-02', '2015-12-03', '2015-12-04', '2015-12-05', '2015-12-06', '2015-12-07', '2015-12-08',
@@ -160,13 +160,12 @@ class prediction:
             mean.plot(color='blue')
             plt.title('Hydraulic Energy Consumption Prediction for the 8th of December 2022')
             plt.xlabel('Time')
-            plt.ylabel('MW')
+            plt.ylabglobalel('MW')
             plt.savefig('Hydraulic_Energy_Consumption', format = 'pdf')
             hydraulicconsumption = mean.to_frame()
             print(hydraulicconsumption)
             return(data, mean)
         else :
             print('The choosen energy is not in the available ones.')
-    
-
+      
 print(prediction.dataset())

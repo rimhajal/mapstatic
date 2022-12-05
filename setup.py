@@ -9,6 +9,6 @@ setup(
   author='Thiziri Abchiche ; Rim Alhajal ; Maryem El Yamani ; Lilou Zulewski',
   author_email='lilou_zulewski01@etu.umontpellier.fr',
   license='MIT',
-  packages=['mapstatic', 'mapstatic.visualization', 'mapstatic.prediction'],
+  packages=['mapstatic','mapstatic.prediction', 'mapstatic.visualization', 'mapstatic.visualization.geodata', 'mapstatic.visualization.io', 'mapstatic.visualization.vis'],
   zip_safe=False
 )

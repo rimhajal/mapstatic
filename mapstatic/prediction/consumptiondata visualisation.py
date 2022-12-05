@@ -131,17 +131,17 @@ print("le nombre de NaN  est : ",int(data4.isna().sum()))
 
 
 df = pd.concat([data1, data2, data3,data4], axis=0)
-return df
+df.head()
 
-#____________________visualisation des données_____
+#____________________visualisation des données_________
 px.area(y='Consommation (MW)',data_frame= df)
-
 df.resample('Y').mean().plot()
 df1 = df.reset_index()
 df1.rename(columns = {'Consommation (MW)': 'y', 'Temps':'ds'})
 plt.plot(df1['y'], label='Consumption')
-
-
+df1.plot(x='ds',y='y', figsize=(18,6))
+#___________________________Prediction avec prophet____________
+df1['ds']= pd.to_datetime(df1['ds'], format='%Y-%m-%d').dt.date
 
 
 
