@@ -1,0 +1,39 @@
+import pandas as pd 
+import numpy as np 
+#import plotly.express as px 
+
+
+#load dataframe per cities
+df = pd.read_csv('C:/Users/SCD UM/Desktop/mapstatic/mapstatic/consommation-annuelle-residentielle-par-adresse.csv',sep=';')
+print(df)
+
+#extraction data from dataframe df  
+df_new = df [['Année','Code INSEE de la commune','Nom de la commune','Consommation annuelle moyenne de la commune (MWh)']].copy()
+print(df_new)
+df_new.head()
+
+#load dataframe per departement 
+df_deprt = pd.read_csv('C:/Users/SCD UM/Desktop/mapstatic/mapstatic/communes-departement-region.csv',sep=';')
+print(df_deprt)
+
+#data filtering
+def df_deprt_ann(df_new,df_deprt,années):
+ df_ann=df_new.loc[df_new["Année"]== années] #dataframe for years 
+ 
+ #drop missing values 
+ df_ann.dropna(subset=['Code INSEE de la commune','Nom de la commune','Consommation annuelle moyenne de la commune (MWh)'])
+ #rename column as name as df_deprt
+ df_ann=df_ann.rename(columns={"Code INSEE de la commune":"code_commune_INSEE"})
+ df_ann['code_commune_INSEE']=df_ann['code_commune_INSEE'].astype(str)
+ INSEE_codes =set(df_ann['code_commune_INSEE'])
+ df_deprt=df_deprt.loc[df_deprt['code_commune_INSEE'].isin(INSEE_codes)]
+ df_deprt['code_commune_INSEE']=df_deprt['code_commune_INSEE'].astype(int)
+ df_ann['code_commune_INSEE']=df_ann['code_commune_INSEE'].astype(int)
+ #concatenate df_ann & df_deprt
+ df_ann_deprt =pd.merge(df_deprt,df_ann,how='inner',on='code_commune_INSEE ')
+ df_ann_deprt.drop_duplicates(subset=['Consommation annuelle moyenne de la commune (MWh)','Nom de la commune'])
+ df_ann_deprt.dropna(subset=['Nom de la commune'],inplace=True)
+ df_ann_deprt=df_ann_deprt[['nom_department ','Consommation annuelle moyenne de la commune (MWh)', 'Nom de la commune']]
+ df_ann_deprt= df_ann_deprt.groupby(['nom_departement']).sum()
+
+ return df_ann_deprt
