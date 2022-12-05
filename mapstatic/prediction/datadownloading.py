@@ -8,7 +8,7 @@ url = 'https://odre.opendatasoft.com/explore/dataset/eco2mix-regional-cons-def/d
 path_target = './data/consumptiondata.csv'
 
 #defining a class to download the data
-class datadownloading():
+class datadownloading:
     '''downloading the dataframe'''
     def __init__(selfurl=url, target_name=path_target):
         path, fname = os.path.split(path_target)
