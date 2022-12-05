@@ -1,5 +1,5 @@
 <p align="center">
-  <strong> MAPSTATIC </strong> <br></p>
+   MAPSTATIC <br></p>
 
 ## Overview
 
