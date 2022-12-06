@@ -1,7 +1,7 @@
 Contacts
 =========
 
-If there are any remarks or notes you wish to make, kinldy reach out to us or make a pull request on `Github`_.
+If there are any remarks or notes you wish to make, kindly reach out to us or make a pull request on `Github`_.
 
 .. _Github: https://github.com/rimhajal/mapstatic
 
