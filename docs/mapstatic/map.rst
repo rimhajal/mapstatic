@@ -17,7 +17,9 @@ Choropleth
 ^^^^^^^^^^
 
 ``Choropleth`` is the function that helped introduce the data to the Folium map. The below code was used:
+
 .. code-block:: python
+
     mymap.choropleth(
     geo_data=geo_json_data,
     name='Communes',
@@ -39,12 +41,12 @@ Folium Package & Other Ressources
 
 The ``Folium`` package allows the manipulation of the map of the world using specific coordinates. 
 With the coordinates of France being known, and a geo json file found on github with the coordinates of each commune, it was easy to join those in the json file with the commune names in the dataset at hand.
-Below is the link for the json file used:
-__ <https://www.data.gouv.fr/fr/datasets/r/fb3580f6-e875-408d-809a-ad22fc418581>
+`Here <https://www.data.gouv.fr/fr/datasets/r/fb3580f6-e875-408d-809a-ad22fc418581>`_  is the used link for the json file.
 
 The ``Folium`` package contains several tools including the one used to implement the interactive feature of the map:
 
 .. code-block:: python
+
     folium.features.GeoJson(
     data=df_final,
     style_function=style_function, 
@@ -68,7 +70,9 @@ Result
 ^^^^^^
 
 The map was saved in HTML format using:
+
 .. code:: python
+
     mymap.save("mymap.html")
 
 .. raw:: html
