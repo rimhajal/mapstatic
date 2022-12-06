@@ -88,5 +88,5 @@ folium.features.GeoJson(
 ).add_to(mymap)
 folium.LayerControl().add_to(mymap)
 
-mymap.save("mymap.svg")
+mymap.save("mymap.html")
 
