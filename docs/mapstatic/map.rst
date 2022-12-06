@@ -22,16 +22,16 @@ Choropleth
 .. code-block:: python
 
     mymap.choropleth(
-    geo_data=geo_json_data,
-    name='Communes',
-    data=commune_avg,
-    columns=['Nom de la commune','Consommation annuelle moyenne de la commune (MWh)'],
-    key_on="feature.properties.libgeo",
-    fill_color='YlGnBu', nan_fill_color="#FF000000",
-    fill_opacity=1,
-    line_opacity=0.2,
-    legend_name='Consommation moyenne des 4 dernières années (MWh)',
-    smooth_factor=0
+        geo_data=geo_json_data,
+        name='Communes',
+        data=commune_avg,
+        columns=['Nom de la commune','Consommation annuelle moyenne de la commune (MWh)'],
+        key_on="feature.properties.libgeo",
+        fill_color='YlGnBu', nan_fill_color="#FF000000",
+        fill_opacity=1,
+        line_opacity=0.2,
+        legend_name='Consommation moyenne des 4 dernières années (MWh)',
+        smooth_factor=0
     )
 
 The ``geo_data`` option is used for the file containing the coordinates of the communes, and ``data`` is for the data added to the map. As for the color fills, it is simply for visual effects and can be easily changed depending on preference.
@@ -49,18 +49,18 @@ The ``Folium`` package contains several tools including the one used to implemen
 .. code-block:: python
 
     folium.features.GeoJson(
-    data=df_final,
-    style_function=style_function, 
-    control=False,
-    highlight_function=highlight_function, 
-    tooltip=folium.features.GeoJsonTooltip(
-        fields=['Nom de la commune','Consommation annuelle moyenne de la commune (MWh)'],
-        aliases=['Commune: ','Consommation moyenne (MWh): '],
-        style=("background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;"),
-        localize=True,
-        sticky=True,
-        labels=True,
-    )
+        data=df_final,
+        style_function=style_function, 
+        control=False,
+        highlight_function=highlight_function, 
+        tooltip=folium.features.GeoJsonTooltip(
+            fields=['Nom de la commune','Consommation annuelle moyenne de la commune (MWh)'],
+            aliases=['Commune: ','Consommation moyenne (MWh): '],
+            style=("background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;"),
+            localize=True,
+            sticky=True,
+            labels=True,
+            )
     ).add_to(mymap)
 
 The ``df_final``  dataset is a merge between the json file previously used and the dataset. It allows to match the geometry features of the communes to the ones in the database, removing any commune that does not have data.
@@ -76,7 +76,7 @@ The map was saved in HTML format using:
 
     mymap.save("mymap.html")
 
-.. image:: ./mymap.svg 
+.. image:: mymap.svg 
     :width: = 500
 
 
