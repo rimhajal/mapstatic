@@ -75,8 +75,8 @@ The map was saved in HTML format using:
 
     mymap.save("mymap.html")
 
-.. image:: mymap.svg 
-    width = 500
+.. image:: .\mymap.svg 
+    :width: = 500
 
 
 
