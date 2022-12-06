@@ -1,0 +1,17 @@
+.wy-side-nav-search{
+    background-color:
+    #6595EF
+    } /* 6595EF bleu */
+
+.wy-nav-side {
+    background-color: #000000
+    } /* 000000 noir */
+
+.textwidget {
+    background-color: #6595EF;
+    }
+     
+     /* Upon hovering */
+.textwidget:hover {
+    background-color: #222;
+    }
