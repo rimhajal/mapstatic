@@ -9,6 +9,7 @@ The mean of consumption throughout the past 4 years is the value represented.
 With ``Folium``, the map is firstly defined as:
 
 .. code:: python
+
     mymap = folium.Map(location=[46.2276,2.2137], zoom_start=5.5)
 
 The coordinates being those of France.
@@ -75,7 +76,7 @@ The map was saved in HTML format using:
 
     mymap.save("mymap.html")
 
-.. image:: .\mymap.svg 
+.. image:: ./mymap.svg 
     :width: = 500
 
 
