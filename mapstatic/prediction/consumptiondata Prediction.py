@@ -17,18 +17,17 @@ import csv
 import plotly.express as px
 import pooch  
 from IPython import get_ipython
-from prophet import Prophet
 from statsmodels.tools.eval_measures import rmse
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
-from prophet.plot import plot_components_plotly
-from prophet.plot import plot_plotly
 import pandas as dp
 
 
 
 
 #......DATA 2020............................................................
+class data():
+    
 url = "https://bit.ly/3V81yIg"
 path_target = "./eco2mix-national-cons-def(3).csv"
 path, fname = os.path.split(path_target)
@@ -142,9 +141,3 @@ plt.plot(df1['y'], label='Consumption')
 df1.plot(x='ds',y='y', figsize=(18,6))
 #___________________________Prediction avec prophet____________
 df1['ds']= pd.to_datetime(df1['ds'], format='%Y-%m-%d').dt.date
-model= Prophet()
-model.fit(df1)
-days=48*5 # heure * nombre de jour
-future = model.fit(df1).make_future_dataframe(periods=days, freq="15T", include_history=False,daily_seasonality=True)
-forcast = model.predict(future)
-fig1=model.plot(forecast)
