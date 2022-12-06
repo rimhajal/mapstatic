@@ -25,6 +25,7 @@ Some Energies' Consumption
 
 Some Energies' Predictions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
  .. image:: ../_images/globalprediction.pdf
    :align: center                          
 
