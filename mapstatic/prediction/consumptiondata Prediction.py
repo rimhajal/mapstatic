@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import csv
 import plotly.express as px
-import pooch  # download data / avoid re-downloading
+import pooch  
 from IPython import get_ipython
 from prophet import Prophet
 from statsmodels.tools.eval_measures import rmse
@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 from prophet.plot import plot_components_plotly
 from prophet.plot import plot_plotly
 import pandas as dp
-from datetime import datetime
+
 
 
 
