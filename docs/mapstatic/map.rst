@@ -67,7 +67,7 @@ The ``df_final``  dataset is a merge between the json file previously used and t
 Both the ``style_function`` and ``highlight_function`` are defined according to preference before the function.
 The ``GeoJsonTooltip`` feature details what part of the data will be displayed when you hover over the selected commune.
 
-Result
+Output
 ^^^^^^
 
 The map was saved in HTML format using:
