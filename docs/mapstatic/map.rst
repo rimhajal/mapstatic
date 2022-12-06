@@ -75,6 +75,9 @@ The map was saved in HTML format using:
 
     mymap.save("mymap.html")
 
-.. file:: ./mymap.html
+.. image:: mymap.svg 
+    width = 500
+
+
 
 
