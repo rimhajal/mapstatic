@@ -70,3 +70,6 @@ Result
 The map was saved in HTML format using:
 .. code:: python
     mymap.save("mymap.html")
+
+.. raw:: html
+   :file: mymap-html
