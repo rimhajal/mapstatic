@@ -4,7 +4,7 @@ Interactive Map
 Concept
 ^^^^^^^
 
-The map is based on the power consumption database and spreads out the data on the map given the commune.
+The map is based on the power consumption database downloaded from the link provided on the official `government <https://data.enedis.fr/explore/dataset/consommation-annuelle-residentielle-par-adresse/download/?format=csv&timezone=Europe/Berlin&lang=fr&use_labels_for_header=true&csv_separator=%3B> `and spreads out the data on the map given the commune.
 The mean of consumption throughout the past 4 years is the value represented.
 With ``Folium``, the map is firstly defined as:
 
@@ -31,7 +31,7 @@ Choropleth
     smooth_factor=0
     )
 
-The ``geo_data`` is used for the file containing the coordinates of the communes, and the ``data`` option is for the data added to the map. As for the color fills, it is simply for visual effects and can be easily changed depending on preference.
+The ``geo_data`` option is used for the file containing the coordinates of the communes, and ``data`` is for the data added to the map. As for the color fills, it is simply for visual effects and can be easily changed depending on preference.
 
 
 Folium Package & Other Ressources
