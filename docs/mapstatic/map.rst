@@ -58,7 +58,7 @@ The Folium package contains several tools including the one used to implement th
         sticky=True,
         labels=True,
     )
-).add_to(mymap)
+    ).add_to(mymap)
 
 The df_final dataset is a merge between the json file previously used and the dataset. It allows to match the geometry features of the communes to the ones in the database, removing any commune that does not have data.
 Both the style_function and highlight_function are defined according to preference before the function.
