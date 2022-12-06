@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Mapstatic's documentation!
+Welcome to Mapstatic's Documentation!
 ===========================================
 
 This package was built as a project for a web development course.
