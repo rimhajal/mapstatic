@@ -4,7 +4,7 @@ Mapstatic Examples !
 Some Energies' Consumption
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-. image:: ../_images/globalconsumption.pdf
+.. image:: ../_images/globalconsumption.pdf
    :align: center                          
 
  .. image:: ../_images/thermalconsumption.pdf
