@@ -1,0 +1,43 @@
+import pandas as pd 
+import numpy as np 
+import matplotlib 
+import matplotlib.pyplot as plt 
+#import seaborn as sns 
+
+
+#charger les données 
+df=pd.read_csv('C:/Users/SCD UM/Desktop/mapstatic/mapstatic/consommation-annuelle-residentielle-par-adresse.csv',sep=';')
+print(df)
+
+#extraction des colonnes 
+print(df)
+df_new = df [['Nom de la commune','Libellé de voie','Consommation annuelle moyenne de la commune (MWh)']].copy()
+print(df_new)
+df_new.head()
+
+#Extraction des lignes 
+
+df_new.set_index("Libellé de voie", inplace = True)
+df_occ_her = df_new.loc ["DE MONTPELLIER"]
+print(df_occ_her)
+df_her=pd.DataFrame(df_occ_her)
+print(df_occ_her)
+df_occ_her.head()
+
+
+
+#plot a histogramme 
+print(df_occ_her)
+df_occ_her.plot(x='Nom de la commune', y = 'Consommation annuelle moyenne de la commune (MWh)', kind='bar',figsize=[15,15])
+plt.show()
+
+#plot a diagram 
+
+x=[3.15 ,4.05,4.43,6.11,6.14,6.50,]
+fig=plt.figure(figsize=(5.5,5.5))
+plt.pie(x,labels=("Rodez","Nimes","fortignan","saint-george-d'orque","prade-le-lez","castries"),
+colors =("#a86544","#eb5b13","#ebc713","#bdeb13",'#F5F5DC','#F0FFFF','#DEB887'),
+shadow=True, startangle=140,autopct='%1.1f%%'
+)
+plt.title("les villes les plus/moins consommatrice de l'occitanie")
+plt.show()

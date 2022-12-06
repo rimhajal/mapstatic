@@ -6,11 +6,10 @@ os
 geopandas
 folium
 pooch
-plotly.express
-json
-requests
+plotly.express 
+json 
+requests 
+matplotlib.pyplot
 Prophet
 statsmodels
 warnings
-plotly.express
-datetime
