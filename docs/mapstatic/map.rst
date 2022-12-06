@@ -82,7 +82,7 @@ The file might be too large to load, which is why we provided an image to help v
 
 .. image:: _images/mymap.pdf.pdf
     :width: 500
-    :alternative text: Image of an Interactive Map of France
+    :alt: Interactive Map of France
     :align: center
 
 
