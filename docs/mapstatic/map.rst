@@ -20,7 +20,7 @@ Choropleth
 ^^^^^^^^^^
 
 Choropleth is the function that helped introduce the data to the Folium map. The below code was used:
-.. code:: python
+.. code-block:: python
     mymap.choropleth(
     geo_data=geo_json_data,
     name='Communes',
