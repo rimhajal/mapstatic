@@ -80,7 +80,7 @@ The map was saved in HTML format using:
 An HTML view of the map is linked `here <./mymap.html>`_.
 The file might be too large to load, which is why we provided an image to help visualize it better:
 
-.. image:: _images/mymap.pdf.pdf
+.. image:: ../_images/mymap.pdf.pdf
     :width: 500
     :alt: Interactive Map of France
     :align: center
