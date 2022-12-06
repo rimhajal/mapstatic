@@ -77,7 +77,7 @@ The map was saved in HTML format using:
     mymap.save("mymap.html")
 
 
-An HTML view of the map is linked `here <../mymap.html>`_.
+An HTML view of the map is linked `here <./mymap.html>`_.
 The file might be too large to load, which is why we provided an image in PDF format to help visualize the result better:
 
 .. image:: ../_images/mymap.pdf.pdf
