@@ -78,7 +78,7 @@ The map was saved in HTML format using:
 
 
 An HTML view of the map is linked `here <../mymap.html>`_.
-The file might be too large to load, which is why we provided an image to help visualize it better:
+The file might be too large to load, which is why we provided an image in PDF format to help visualize the result better:
 
 .. image:: ../_images/mymap.pdf.pdf
     :width: 500
