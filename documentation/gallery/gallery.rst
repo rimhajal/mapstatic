@@ -1,8 +1,8 @@
-Mapstatic's Examples !
-=======================
+Mapstatic Examples !
+=====================
 
 Some Energies'Consumption
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Some Energies's Predictions
+Some Energies' Predictions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
