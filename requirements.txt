@@ -3,7 +3,6 @@ matplotlib
 scipy
 pandas
 os
-pyogrio
 geopandas
 folium
 pooch
@@ -11,3 +10,6 @@ plotly.express
 json 
 requests 
 matplotlib.pyplot
+Prophet
+statsmodels
+warnings
