@@ -4,7 +4,7 @@ Interactive Map
 Concept
 ^^^^^^^
 
-The map is based on the power consumption database downloaded from the link provided on the official `government <https://data.enedis.fr/explore/dataset/consommation-annuelle-residentielle-par-adresse/download/?format=csv&timezone=Europe/Berlin&lang=fr&use_labels_for_header=true&csv_separator=%3B>`_ and spreads out the data on the map given the commune.
+The map is based on the power consumption database downloaded from the link provided on the official `government <https://data.enedis.fr/explore/dataset/consommation-annuelle-residentielle-par-adresse/download/?format=csv&timezone=Europe/Berlin&lang=fr&use_labels_for_header=true&csv_separator=%3B>`_ website and spreads out the consumption data on the map given the commune.
 The mean of consumption throughout the past 4 years is the value represented.
 With ``Folium``, the map is firstly defined as:
 
