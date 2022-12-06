@@ -21,7 +21,21 @@ from statsmodels.tools.eval_measures import rmse
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import pandas as dp
-
+%matplotlib inline
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+from statsmodels.tools.eval_measures import rmse
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import pylab
+from statsmodels.tools.eval_measures import rmse
+from sklearn.model_selection import train_test_split
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.api import SimpleExpSmoothing 
+from scipy import stats
+from sklearn.linear_model import LinearRegression
+import matplotlib as mpl
 
 
 
