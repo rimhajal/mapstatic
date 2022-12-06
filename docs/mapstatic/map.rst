@@ -75,8 +75,8 @@ The map was saved in HTML format using:
 
     mymap.save("mymap.html")
 
-.. image:: docs/mapstatic/mymap.svg
+.. image:: ./mymap.svg
   :width: 400
   :alt: Alternative text
 
-  
+
