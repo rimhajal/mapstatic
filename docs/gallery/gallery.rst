@@ -4,22 +4,41 @@ Mapstatic Examples !
 Some Energies' Consumption
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Some Energies' Predictions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- .. image:: ../_images/globalprediction.svg 
+. image:: ../_images/globalconsumption.pdf
    :align: center                          
 
- .. image:: ../_images/thermalprediction.svg
+ .. image:: ../_images/thermalconsumption.pdf
    :align: center
 
- .. image:: ../_images/nuclearprediction.svg
+ .. image:: ../_images/nuclearconsumption.pdf
    :align: center
 
- .. image:: ../_images/windprediction.svg
+ .. image:: ../_images/windconsumption.pdf
    :align: center
 
- .. image:: ../_images/solarprediction.svg
+ .. image:: ../_images/solarconsumption.pdf
    :align: center
 
- .. image:: ../_images/hydraulicprediction.svg
+ .. image:: ../_images/hydraulicconsumption.pdf
+   :align: center
+   
+
+Some Energies' Predictions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ .. image:: ../_images/globalprediction.pdf
+   :align: center                          
+
+ .. image:: ../_images/thermalprediction.pdf
+   :align: center
+
+ .. image:: ../_images/nuclearprediction.pdf
+   :align: center
+
+ .. image:: ../_images/windprediction.pdf
+   :align: center
+
+ .. image:: ../_images/solarprediction.pdf
+   :align: center
+
+ .. image:: ../_images/hydraulicprediction.pdf
    :align: center
