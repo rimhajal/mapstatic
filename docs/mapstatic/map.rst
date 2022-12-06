@@ -77,7 +77,7 @@ The map was saved in HTML format using:
     mymap.save("mymap.html")
 
 
-An HTML view of the map is linked `here <_./mymap.html>`_.
+An HTML view of the map is linked `here <./mymap.html>`_.
 
 
 
