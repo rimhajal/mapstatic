@@ -4,42 +4,78 @@ Mapstatic Examples !
 Some Energies' Consumption
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+*Global Energy*
+""""""""""""""""
+
 .. image:: ../_images/globalconsumption.pdf
    :align: center                          
 
- .. image:: ../_images/thermalconsumption.pdf
+*Thermal Energy*
+""""""""""""""""
+
+.. image:: ../_images/thermalconsumption.pdf
    :align: center
 
- .. image:: ../_images/nuclearconsumption.pdf
+*Nuclear Energy*
+""""""""""""""""
+
+.. image:: ../_images/nuclearconsumption.pdf
    :align: center
 
- .. image:: ../_images/windconsumption.pdf
+*Wind Energy*
+""""""""""""""""
+
+.. image:: ../_images/windconsumption.pdf
    :align: center
 
- .. image:: ../_images/solarconsumption.pdf
+*Solar Energy*
+""""""""""""""""
+
+.. image:: ../_images/solarconsumption.pdf
    :align: center
 
- .. image:: ../_images/hydraulicconsumption.pdf
+*Hydraulic Energy*
+""""""""""""""""""
+
+.. image:: ../_images/hydraulicconsumption.pdf
    :align: center
    
 
 Some Energies' Predictions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- .. image:: ../_images/globalprediction.pdf
+*Global Energy*
+""""""""""""""""
+
+.. image:: ../_images/globalprediction.pdf
    :align: center                          
 
- .. image:: ../_images/thermalprediction.pdf
+*Thermal Energy*
+""""""""""""""""
+
+.. image:: ../_images/thermalprediction.pdf
    :align: center
 
- .. image:: ../_images/nuclearprediction.pdf
+*Nuclear Energy*
+""""""""""""""""
+
+.. image:: ../_images/nuclearprediction.pdf
    :align: center
 
- .. image:: ../_images/windprediction.pdf
+*Wind Energy*
+""""""""""""""""
+
+.. image:: ../_images/windprediction.pdf
    :align: center
 
- .. image:: ../_images/solarprediction.pdf
+*Solar Energy*
+""""""""""""""""
+
+.. image:: ../_images/solarprediction.pdf
    :align: center
 
- .. image:: ../_images/hydraulicprediction.pdf
+*Hydraulic Energy*
+""""""""""""""""""
+
+.. image:: ../_images/hydraulicprediction.pdf
    :align: center
