@@ -77,7 +77,7 @@ The map was saved in HTML format using:
     mymap.save("mymap.html")
 
 
-An HTML view of the map is linked `here <C:/Users/reem%20hajal/mapstatic-1/docs/mapstatic/mymap.html>`_.
+An HTML view of the map is linked `here <mapstatic/mymap.html>`_.
 
 
 
