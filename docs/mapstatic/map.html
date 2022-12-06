@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Map &mdash; mapstatic 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css\custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Consumption Prediction" href="static.html" />
+    <link rel="prev" title="Sources" href="../installation/sources.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> mapstatic
+            <img src="../_static/mapstaticlogo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation, Contacts, Sources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/installation.html">How to install <em>mapstatic</em> ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/contacts.html">Contacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/sources.html">Sources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Mapstatic</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interactive Map</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#concept">Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#choropleth">Choropleth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#folium-package-other-ressources">Folium Package &amp; Other Ressources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#result">Result</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="static.html">Consumption Prediction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../gallery/gallery.html">Mapstatic Examples !</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">mapstatic</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Interactive Map</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/mapstatic/map.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interactive-map">
+<h1>Interactive Map<a class="headerlink" href="#interactive-map" title="Permalink to this headline"></a></h1>
+<section id="concept">
+<h2>Concept<a class="headerlink" href="#concept" title="Permalink to this headline"></a></h2>
+<p>The map is based on the power consumption database downloaded from the link provided on the official <a class="reference external" href="https://data.enedis.fr/explore/dataset/consommation-annuelle-residentielle-par-adresse/download/?format=csv&amp;timezone=Europe/Berlin&amp;lang=fr&amp;use_labels_for_header=true&amp;csv_separator=%3B">government</a> website and spreads out the consumption data on the map given the commune.
+The mean of consumption throughout the past 4 years is the value represented.
+With <code class="docutils literal notranslate"><span class="pre">Folium</span></code>, the map is firstly defined as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mymap</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">46.2276</span><span class="p">,</span><span class="mf">2.2137</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mf">5.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The coordinates being those of France.</p>
+</section>
+<section id="choropleth">
+<h2>Choropleth<a class="headerlink" href="#choropleth" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Choropleth</span></code> is the function that helped introduce the data to the Folium map. The below code was used:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mymap</span><span class="o">.</span><span class="n">choropleth</span><span class="p">(</span>
+    <span class="n">geo_data</span><span class="o">=</span><span class="n">geo_json_data</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Communes&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">commune_avg</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Nom de la commune&#39;</span><span class="p">,</span><span class="s1">&#39;Consommation annuelle moyenne de la commune (MWh)&#39;</span><span class="p">],</span>
+    <span class="n">key_on</span><span class="o">=</span><span class="s2">&quot;feature.properties.libgeo&quot;</span><span class="p">,</span>
+    <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;YlGnBu&#39;</span><span class="p">,</span> <span class="n">nan_fill_color</span><span class="o">=</span><span class="s2">&quot;#FF000000&quot;</span><span class="p">,</span>
+    <span class="n">fill_opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">line_opacity</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">legend_name</span><span class="o">=</span><span class="s1">&#39;Consommation moyenne des 4 dernières années (MWh)&#39;</span><span class="p">,</span>
+    <span class="n">smooth_factor</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">geo_data</span></code> option is used for the file containing the coordinates of the communes, and <code class="docutils literal notranslate"><span class="pre">data</span></code> is for the data added to the map. As for the color fills, it is simply for visual effects and can be easily changed depending on preference.</p>
+</section>
+<section id="folium-package-other-ressources">
+<h2>Folium Package &amp; Other Ressources<a class="headerlink" href="#folium-package-other-ressources" title="Permalink to this headline"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Folium</span></code> package allows the manipulation of the map of the world using specific coordinates.
+With the coordinates of France being known, and a geo json file found on github with the coordinates of each commune, it was easy to join those in the json file with the commune names in the dataset at hand.
+<a class="reference external" href="https://www.data.gouv.fr/fr/datasets/r/fb3580f6-e875-408d-809a-ad22fc418581">Here</a>  is the used link for the json file.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Folium</span></code> package contains several tools including the one used to implement the interactive feature of the map:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">folium</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">GeoJson</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_final</span><span class="p">,</span>
+    <span class="n">style_function</span><span class="o">=</span><span class="n">style_function</span><span class="p">,</span>
+    <span class="n">control</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">highlight_function</span><span class="o">=</span><span class="n">highlight_function</span><span class="p">,</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">GeoJsonTooltip</span><span class="p">(</span>
+        <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Nom de la commune&#39;</span><span class="p">,</span><span class="s1">&#39;Consommation annuelle moyenne de la commune (MWh)&#39;</span><span class="p">],</span>
+        <span class="n">aliases</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Commune: &#39;</span><span class="p">,</span><span class="s1">&#39;Consommation moyenne (MWh): &#39;</span><span class="p">],</span>
+        <span class="n">style</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;&quot;</span><span class="p">),</span>
+        <span class="n">localize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">sticky</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">mymap</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">df_final</span></code>  dataset is a merge between the json file previously used and the dataset. It allows to match the geometry features of the communes to the ones in the database, removing any commune that does not have data.
+Both the <code class="docutils literal notranslate"><span class="pre">style_function</span></code> and <code class="docutils literal notranslate"><span class="pre">highlight_function</span></code> are defined according to preference before the function.
+The <code class="docutils literal notranslate"><span class="pre">GeoJsonTooltip</span></code> feature details what part of the data will be displayed when you hover over the selected commune.</p>
+</section>
+<section id="result">
+<h2>Result<a class="headerlink" href="#result" title="Permalink to this headline"></a></h2>
+<p>The map was saved in HTML format using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mymap</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;mymap.html&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>An HTML view of the map is linked <a class="reference external" href="./mymap.html">here</a>.
+The file might be too large to load, which is why we provided an image to help visualize it better:</p>
+<a class="reference internal image-reference" href="../_images/mymap.pdf.pdf"><img alt="Interactive Map of France" class="align-center" src="../_images/mymap.pdf.pdf" style="width: 500px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../installation/sources.html" class="btn btn-neutral float-left" title="Sources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="static.html" class="btn btn-neutral float-right" title="Consumption Prediction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Thiziri Abchiche, Rim Alhajal, Maryem El Yamani, Lilou Zulewski.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
