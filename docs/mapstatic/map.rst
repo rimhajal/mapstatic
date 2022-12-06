@@ -7,7 +7,7 @@ Folium Package & Other Ressources
 The Folium package allows the manipulation of the map of the world using specific coordinates. 
 With the coordinates of France being known, and a geo json file found on github with the coordinates of each commune, it was easy to join those in the json file with the commune names in the dataset at hand.
 Below is the link for the json file used:
-__ https://www.data.gouv.fr/fr/datasets/r/fb3580f6-e875-408d-809a-ad22fc418581
+__ <https://www.data.gouv.fr/fr/datasets/r/fb3580f6-e875-408d-809a-ad22fc418581>
 
 
 Concept
@@ -32,5 +32,5 @@ Choropleth is the function that helped introduce the data to the Folium map. The
     line_opacity=0.2,
     legend_name='Consommation moyenne des 4 dernières années (MWh)',
     smooth_factor=0
-)
+    )
 
