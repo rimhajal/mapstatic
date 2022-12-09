@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
 import datashaping
+import csv
 
 #making the prediction
 class prediction:
@@ -43,8 +44,10 @@ class prediction:
             plt.ylabel('MW')
             plt.savefig('Global_Energy_Consumption', format = 'pdf')
             globalconsumption = mean.to_frame()
-            print(globalconsumption)
-            return(data, mean)
+            globalprediction = pd.DataFrame(globalconsumption)
+            globalprediction.to_csv(r'./globalprediction.csv')
+            print(globalprediction)
+            return(globalprediction, mean)
         elif energy == 'thermal':
             data = datashaping.datashaping.thermaldata()
             data = data.loc[['2016-12-01', '2016-12-02', '2016-12-03', '2016-12-04', '2016-12-05', '2016-12-06', '2016-12-07', '2016-12-08',
@@ -68,8 +71,10 @@ class prediction:
             plt.ylabel('MW')
             plt.savefig('Thermal_Energy_Consumption', format = 'pdf')
             thermalconsumption = mean.to_frame()
-            print(thermalconsumption)
-            return(data, mean)
+            thermalprediction = pd.DataFrame(thermalconsumption)
+            thermalprediction.to_csv(r'./thermalprediction.csv')
+            print(thermalprediction)
+            return(thermalprediction, mean)
         elif energy == 'nuclear':
             data = datashaping.datashaping.nucleardata()
             data = data.loc[['2016-12-01', '2016-12-02', '2016-12-03', '2016-12-04', '2016-12-05', '2016-12-06', '2016-12-07', '2016-12-08',
@@ -93,8 +98,10 @@ class prediction:
             plt.ylabel('MW')
             plt.savefig('Nuclear_Energy_Consumption', format = 'pdf')
             nuclearconsumption = mean.to_frame()
-            print(nuclearconsumption)
-            return(data, mean)
+            nuclearprediction = pd.DataFrame(nuclearconsumption)
+            nuclearprediction.to_csv(r'./nuclearprediction.csv')
+            print(nuclearprediction)
+            return(nuclearprediction, mean)
         elif energy == 'wind':
             data = datashaping.datashaping.winddata()
             data = data.loc[['2020-12-01', '2020-12-02', '2020-12-03', '2020-12-04', '2020-12-05', '2020-12-06', '2020-12-07', '2020-12-08',
@@ -114,8 +121,10 @@ class prediction:
             plt.ylabel('MW')
             plt.savefig('Wind_Energy_Consumption', format = 'pdf')
             windconsumption = mean.to_frame()
-            print(windconsumption)
-            return(data, mean)
+            windprediction = pd.DataFrame(windconsumption)
+            windprediction.to_csv(r'./windprediction.csv')
+            print(windprediction)
+            return(windprediction, mean)
         elif energy == 'solar':
             data = datashaping.datashaping.solardata()
             data = data.loc[['2020-12-01', '2020-12-02', '2020-12-03', '2020-12-04', '2020-12-05', '2020-12-06', '2020-12-07', '2020-12-08',
@@ -135,8 +144,10 @@ class prediction:
             plt.ylabel('MW')
             plt.savefig('Solar_Energy_Consumption', format = 'pdf')
             solarconsumption = mean.to_frame()
-            print(solarconsumption)
-            return(data, mean)
+            solarprediction = pd.DataFrame(solarconsumption)
+            solarprediction.to_csv(r'./solarprediction.csv')
+            print(solarprediction)
+            return(solarprediction, mean)
         elif energy == 'hydraulic':
             data = datashaping.datashaping.hydraulicdata()
             data = data.loc[['2013-12-01', '2013-12-02', '2013-12-03', '2013-12-04', '2013-12-05', '2013-12-06', '2013-12-07', '2013-12-08',
@@ -160,11 +171,13 @@ class prediction:
             mean.plot(color='blue')
             plt.title('Hydraulic Energy Consumption Prediction for the 8th of December 2022')
             plt.xlabel('Time')
-            plt.ylabglobalel('MW')
+            plt.ylabel('MW')
             plt.savefig('Hydraulic_Energy_Consumption', format = 'pdf')
             hydraulicconsumption = mean.to_frame()
-            print(hydraulicconsumption)
-            return(data, mean)
+            hydraulicprediction = pd.DataFrame(hydraulicconsumption)
+            hydraulicprediction.to_csv(r'./hydraulicprediction.csv')
+            print(hydraulicprediction)
+            return(hydraulicprediction, mean)
         else :
             print('The choosen energy is not in the available ones.')
       
